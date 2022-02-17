@@ -12,7 +12,7 @@ with open("wordle_answer_list.txt") as file:
 def start_wordle(word_list : list) -> None:
     """Remove incorrect words"""
     while len(word_list) > 1:
-        letters_in_word = []
+        word_index = []
         for position in range(5):
             letter = input("Letter entered into positon " + str(position+1) +"?: ").lower()
             print(space)
@@ -26,18 +26,18 @@ def start_wordle(word_list : list) -> None:
                 if color == 'g':
                     if word[position] != letter:
                         word_removal.append(word)
-                        if letter not in letters_in_word:
-                            letters_in_word.append(letter)
+                        if letter not in word_index:
+                            word_index.append(letter)
                 elif color == 'y':
                     if letter not in word:
                         word_removal.append(word)
                     elif word[position] == letter:
                         word_removal.append(word)
-                    if letter not in letters_in_word:
-                        letters_in_word.append(letter)
+                    if letter not in word_index:
+                        word_index.append(letter)
                 elif color == 'b':
                     if letter in word:
-                        if letter not in letters_in_word:
+                        if letter not in word_index:
                             word_removal.append(word)
                         elif word_list[position] == letter:
                             word_removal.append(word)
@@ -50,7 +50,7 @@ def start_wordle(word_list : list) -> None:
         if guess == 'y':
             current_date = datetime.datetime.now()
             print(space)
-            print("Congradulations on solving " + current_date.strftime("%c") + " wordle!")
+            print("Congradulations on solving the " + current_date.strftime("%c") + " wordle!")
             print(space)
             return
 start_wordle(word_list)
