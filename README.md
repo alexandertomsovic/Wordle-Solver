@@ -13,7 +13,7 @@ How to use:
 
 Links to my socials:
 
-LinkTree: linktr.ee/alextomsovic
+LinkTree: https://linktr.ee/alextomsovic
 
 Replit: https://replit.com/@AlexTomsovic
 
