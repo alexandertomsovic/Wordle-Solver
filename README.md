@@ -1,4 +1,4 @@
-# Wordle-Solver by Alex Tomsovic
+# Wordle Solver by Alex Tomsovic
 
 Hi and welcome to my wordle solver. I found a file of all the (supposid) words on wordle and implemented them into the program.
 
